@@ -1,0 +1,77 @@
+function setup() {
+  createCanvas(500, 500);
+  background("#FFF");
+  strokeWeight(8);
+  
+  fill("#D43B26");
+  rect(60, 60, 260, 260);
+  
+  fill("#EED517");
+  rect(320, 60, 134, 120);
+  
+  
+    fill("#FFF");
+  rect(0, 0, 200, 60);
+  
+  fill("#FFF");
+  rect(200, 0, 120, 60);
+  
+  fill("#EED517");
+  rect(320, 0, 134, 60);
+  
+  
+  fill("#FFF");
+  rect(454, 0, 134, 60);
+  
+  fill("#FFF");
+  rect(0, 60, 60, 120);
+   fill("#FFF");
+  rect(0, 180, 60, 380);
+  
+  fill("#EED517");
+  rect(0, 380, 60, 120);
+  
+  
+  
+   fill("#FFF");
+  rect(320, 180, 68, 140);
+     fill("#FFF");
+  rect(388, 180, 66, 140);
+  
+  
+    fill("#FFF");
+  rect(453, 60, 60, 380);
+   fill("#D43B26");
+  rect(453, 380, 60, 120);
+  
+    fill("#455297");
+  rect(320, 380, 134, 120);
+  
+
+    fill("black");
+  rect(60, 320, 130, 60);
+  
+    fill("#FFF");
+  rect(190, 320, 130, 60);
+  
+  
+  
+    fill("black");
+  rect(60, 380, 130, 60);
+  
+    fill("#FFF");
+  rect(190, 380, 130, 60);
+  
+  
+   fill("FFF");
+  rect(60, 440, 130, 60);
+  
+    fill("black");
+  rect(190, 440, 130, 60);
+  
+  
+  
+  
+
+  
+} 
