@@ -1,0 +1,28 @@
+var x=0;
+var y=0;
+var side= 50;
+var offset = 100;
+var r = 0;
+
+function setup() { 
+  createCanvas(400, 400);
+
+}
+  function draw() {
+    frameRate(2);
+    background(0);
+    
+ for (var a=0; a<10; a++){
+   for(var b=0; b<5;b++){
+    fill (250,(70*b),0); 
+    noStroke();
+    	r = random(0, 50); 
+     side=random(0,100); 
+       if (mouseIsPressed) 
+    rect(x+offset*b,y+offset*a,side,side);
+  else
+    ellipse(x+offset*b+r,y+offset*a+r,side,side);
+     
+   }
+ } 
+}
