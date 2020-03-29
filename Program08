@@ -1,0 +1,60 @@
+var colors = [
+  ["#00414f", "#333f42", "#55b0c6", "#0bc1ed", "#1c7287", "#929799"], // Blue
+  ["#db3636", "#911e1e", "#725656", "#f29696", "#561212", "#af0707"], // Red
+  ["#44e21d", "#bbd8b3", "#4a5448", "#417f35", "#69e053", "#21a009"]  // Green
+];
+
+var currentPallete = colors[Math.floor(Math.random() * colors.length)];
+
+var numOfBlocks = 30;
+var ticks = 0;
+
+var setup = function() 
+{
+  createCanvas(400, 400);
+  background(255);
+}
+
+var draw = function() {
+  
+  if (ticks >= 80) {
+    background(255);
+  	generateBlocks();
+    ticks -= 80;
+  }
+  
+  printValue(mouseX + ", " + mouseY);
+  ticks++;
+}
+
+var mousePressed = function() {
+  printValue("Mouse was pressed!");
+}
+
+var getRandomInt = function(max) {
+  return Math.floor(Math.random() * max);
+}
+
+var generateBlocks = function() {
+  for (let i = 0; i < numOfBlocks; i++) {
+    let x, y, w, h;
+    
+    w = getRandomInt(width);
+    h = getRandomInt(width);
+    
+    x = getRandomInt(width);
+    y = getRandomInt(height);
+    
+    createBlock(x, y, w, h);
+  }
+}
+
+var printValue = function(value) {
+  console.log(value);
+}
+
+var createBlock = function(x, y, w, h) {
+  strokeWeight(5);
+  fill(currentPallete[Math.floor(Math.random() * currentPallete.length)]);
+  rect(x, y, w, h);
+}
